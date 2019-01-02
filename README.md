@@ -7,26 +7,23 @@
 
 ---
 
-## source directory 생성
+## 두번_rate_되었을때_평균은_rate의_합을_count로_나눈값
 
-```language
-mkdir -p src/main/java
-mkdir -p src/test/java
+![branch-2](assets/branch_2.png)
+
+두번 ```rate```되었을 때는 ```rate```의 합을 ```count```로 나눈 값이므로 ```rateCount```라는 필드변수를 선언해주었고, ```rate```함수에서 ```rateCount```를 증가시켜주었습니다. 그리고 ```getAverage()```에서 ```rateCount```로 ```rated```를 나눈 값을 리턴하면 됩니다. 하지만 ```rateCount```초기값이 0이므로 0으로 나누는 경우가 생기기 때문에 별도로 처리해준 것을 볼 수 있습니다.
+
+## Refactor
+
+위의 사진에서 
+
+```java
+Movie movie = new Movie();
 ```
-## Movie Class 생성 및 한번도 rate 되지않았을때 평균도 0 테스트
-바로 Movie.java를 만들고 싶지만 TDD에서는 Movie.java를 만들 필요가 있게 개발하는 것이 포인트이다.
 
-![branch_1](assets/branch_1.png)
+코드가 반복되는 것을 줄여봅시다. 해당 코드를 ```before```로 따로 빼주면 아래와 같이 됩니다.
 
-```can_create_Movie()```테스트를 이용해서 ```Movie``` 객체를 생성할 수 있는지 없는지 확인한다. 이 테스트를 통과하기위해서 Movie클래스를 생성해준 것이다.
-
-두번째 테스트로 ```한번도 rate 되지않았을때 평균도 0``` 이라는 테스트에서 한번도 rate되지않았다는 뜻은 객체생성 후 한번도 rate 되지않았다는 뜻이다.
-
-## 한번_rate_되었을때_평균은_rate와_같다 테스트
-
-![branch_1_1](assets/branch_1_1.png)
-
-```rate```를 구하기위해 ```rated```라는 필드변수를 생성해주고 ```rate```될 때마다 ```rated```에 그 값을 더해주고, ```getAverage```는 rated를 리턴한다.
+![branch_2_1](assets/branch_2_1.png)
 
 ---
 > 이 글은 [ 클린코더스 - 백명석님 ](https://www.youtube.com/user/codetemplate/videos) 강의를 보고 작성한 글입니다.
