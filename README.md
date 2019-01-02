@@ -6,6 +6,12 @@
 
 
 ---
+## 목차
+- [source directory 생성](#source-directory-생성)
+- [Movie Class 생성 및 한번도 rate 되지않았을때 평균도 0 테스트](#Movie-Class-생성-및-한번도-rate-되지않았을때-평균도-0-테스트)
+- [한번-rate-되었을때-평균은-rate와-같다 테스트](#한번-rate-되었을때-평균은-rate와-같다-테스트)
+
+---
 
 ## source directory 생성
 
@@ -13,6 +19,7 @@
 mkdir -p src/main/java
 mkdir -p src/test/java
 ```
+
 ## Movie Class 생성 및 한번도 rate 되지않았을때 평균도 0 테스트
 바로 Movie.java를 만들고 싶지만 TDD에서는 Movie.java를 만들 필요가 있게 개발하는 것이 포인트이다.
 
@@ -22,7 +29,7 @@ mkdir -p src/test/java
 
 두번째 테스트로 ```한번도 rate 되지않았을때 평균도 0``` 이라는 테스트에서 한번도 rate되지않았다는 뜻은 객체생성 후 한번도 rate 되지않았다는 뜻이다.
 
-## 한번_rate_되었을때_평균은_rate와_같다 테스트
+## 한번 rate 되었을때 평균은 rate와 같다 테스트
 
 ![branch_1_1](assets/branch_1_1.png)
 
