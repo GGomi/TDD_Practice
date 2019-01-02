@@ -3,7 +3,10 @@
 [Test Driven Development: By Example](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530)의 예제
 
 사용자들은 영화에 평점을 부여할 수 있고(rate), 평점의 평균(getAverage)을 얻을 수 있다.
-
+---
+## 목차
+- [두번_rate_되었을때_평균은_rate의_합을_count로_나눈값](#두번_rate_되었을때_평균은_rate의_합을_count로_나눈값)
+- [Refactor](#Refactor)
 
 ---
 
